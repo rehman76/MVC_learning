@@ -1,0 +1,57 @@
+﻿@model MVC_learning.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Details</title>
+</head>
+<body>
+    <table style="font-family:Arial">
+        <tr>
+            <td>
+                <b>Employee Id:</b>
+            </td>
+            <td>
+                @Model.Id
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <b>Employee Name:</b>
+            </td>
+            <td>
+                @Model.Name
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Employee Gender:</b>
+            </td>
+            <td>
+                @Model.Gender
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Employee City:</b>
+            </td>
+            <td>
+                @Model.City
+            </td>
+        </tr>
+
+
+    </table>
+ @Html.ActionLink("Back to List","Index" , new {DepartmentId = Model.DepartmentId })
+</body>
+</html>

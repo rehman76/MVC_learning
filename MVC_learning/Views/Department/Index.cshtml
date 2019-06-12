@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MVC_learning.Models.Department>
+@using MVC_learning.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Departments</h2>
+    <ul style="font-family:Arial">
+        @foreach (Department dep in @Model)
+        {
+            <li>
+            @Html.ActionLink(dep.DepartmentName,"Index","Employee",new { DepartmentId = dep.DepartmentId },null)
+            </li>
+
+        }
+
+    </ul>
+</body>
+</html>
